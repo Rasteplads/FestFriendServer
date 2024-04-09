@@ -12,5 +12,5 @@ Activate script to use depends on the operating system and shell
 
 # Run Server in development
 ```sh
-uvicorn server:app --reload
+uvicorn server:app --host 0.0.0.0 --port 8000
 ```
