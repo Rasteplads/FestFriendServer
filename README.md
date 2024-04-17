@@ -1,16 +1,33 @@
 # FestFriendServer
 ID Server for festfriend to create and join groups
 
+
 # Setup
+Clone the project with Git and cd into the directory
+```sh
+git clone https://github.com/Rasteplads/FestFriendServer.git
+cd FestFriendServer
+```
+
+Create and activate a virtual environment (Optional).
+## Windows
 ```sh
 python -m venv .venv
 .venv/Scripts/Activate.ps1
-python -m pip install -r requirements.txt
 ```
 
-Activate script to use depends on the operating system and shell
-
-# Run Server in development
+## Linux / Mac
 ```sh
-uvicorn server:app --host 0.0.0.0 --port 8000
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Install the FestFriendServer package with pip
+```sh
+pip install -e .
+```
+
+Run the server
+```sh
+ffserver
 ```
