@@ -3,8 +3,7 @@ name: FestFriendServer CI
 on: [push]
 
 jobs:
-  build:
-
+  Test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -19,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install .
       - name: Test with pytest
         run: |
           pytest
