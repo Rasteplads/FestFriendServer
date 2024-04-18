@@ -1,0 +1,26 @@
+[build-system]
+requires = [
+    "setuptools >= 61.0",
+    "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "fest-friend-server"
+dependencies = [
+    "bcrypt==4.1.2",
+    "fastapi==0.110.0",
+    "uvicorn==0.29.0",
+    "pydantic==2.6.4",
+    "pytest==8.1.1",
+    "httpx==0.25.0"
+]
+readme = "README.md"
+
+[project.scripts]
+ffserver = "fest_friend_server.__main__:main"
+
+[tool.setuptools_scm]
+
+[tool.setuptools.packages.find]
+where = ["src"]
